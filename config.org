@@ -215,6 +215,15 @@ de busca padrão.
       (call-interactively 'find-file)))
 #+end_src
 
+** Abrir arquivo LinuxConfig
+
+#+begin_src emacs-lisp
+(defun fn/openFileConfig()
+  (interactive)
+  (let ((default-directory "/mnt/3C0CEC910CEC478A/Emacs/Linux_Instalation.org"))
+    (call-interactively 'find-file)))
+#+end_src
+
 * Gerenciamento de pacotes
 ** Configuração do package
 
@@ -421,17 +430,17 @@ Funções úteis:
   :config
   (general-evil-setup)
   ;; set up 'SPC' as the global leader key
-  (general-create-definer blau/leader-keys
+  (general-create-definer fn/leader-keys
     :states '(normal insert visual emacs)
     :keymaps 'override
     :prefix "SPC" ;; set leader
     :global-prefix "M-SPC") ;; access leader in insert mode
 
-  (blau/leader-keys
+  (fn/leader-keys
     "TAB TAB" '(comment-line :wk "Comment lines")) 
 
   ;; Buffer/bookmarks
-  (blau/leader-keys
+  (fn/leader-keys
     "b" '(:ignore t :wk "Buffers/Bookmarks")
     "b b" '(switch-to-buffer :wk "Switch to buffer")
     "b i" '(ibuffer :wk "Ibuffer")
@@ -442,15 +451,16 @@ Funções úteis:
     "q q" '(save-buffers-kill-terminal :wk "Quit emacs"))
 
   ;; Files
-  (blau/leader-keys
+  (fn/leader-keys
     "f" '(:ignore t :wk "Files")
     "." '(find-file :wk "Find file")
     "f f" '(find-file :wk "Find file")
     "f p" '(blau/emacs-personal-files :wk "Open personal config files")
-    "f c" '(blau/open-emacs-config :wk "Open emacs config.org"))
+    "f c" '(blau/open-emacs-config :wk "Open emacs config.org")
+    "g p" '(fn/openFileConfig :wk "Open File Config"))
 
   ;; Helpers
-  (blau/leader-keys
+  (fn/leader-keys
     "h" '(:ignore t :wk "Helpers")
     "h r r" '(blau/reaload-settings :wk "Reload emacs settings")))
 #+end_src
@@ -490,7 +500,6 @@ Funções úteis:
 #+end_src
 
 ** Linguagens
-
 *** Markdown mode
 
 Para usar o =pandoc= como comando, ele precisa estar instalado no sistema.
@@ -581,6 +590,26 @@ Evita completar ~<>~ em org-mode para não atrapalhar os snippets de templates.
   (setq visual-fill-column-width 90)
   (setq-default visual-fill-column-center-text t))
  #+end_src
+
+*** Syntax highlighting Bash
+
+#+begin_src emacs-lisp
+(require 'sh-script)
+(setq org-src-fintify-natively t)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((shell . t))) 
+#+end_src
+
+*** Syntax highlighting Golang
+
+#+begin_src emacs-lisp
+(require 'ob-go)
+(setq org-src-fintify-natively t)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((go . t))) 
+#+end_src
 
 ** Vterm
 

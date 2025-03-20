@@ -2,24 +2,6 @@
 #+author:GF
 
 * Sobre o Emacs
-** Para aprender
-
-Uma interface agradável e confortável ajuda muito (é disso que estamos
-cuidando)!
-
-Acompanhar uma configuração do zero ajuda a descobrir algumas das
-principais funcionalidades (olha a gente aqui de novo).
-
-Customizações adicionais devem ser motivadas pelo surgimento de
-necessidades que levem à busca de funcionalidades (e não o contrário).
-
-O próprio Emacs é a melhor fonte de consulta, principalmente os
-atalhos =M-x= (=execute-extended-command=) e =C-h k= (=describe-key=).
-
-Mesmo usando o /evil mode/, é importante conhecer as [[https://codeberg.org/blau_araujo/emacs/src/branch/main/mapa.txt][teclas do Emacs]].
-
-Acompanhe blogs e vlogs sobre Emacs: são excelentes formas de
-descobrir possibilidades insuspeitas.
 
 ** Sistema de ajuda
 
@@ -51,12 +33,6 @@ de busca padrão.
 #+end_exemple
 
 * Configurações Gerais
-** TODO Provisório (Remover)
-
-#+begin_src emacs-lisp
-;(load-theme 'modus-vivendi)
-;(add-hook 'org-mode-hook 'org-indent-mode)
-#+end_src
 
 ** Desabilitar tela de boas vindas(Scratch)
 
@@ -290,7 +266,7 @@ de busca padrão.
 
 ** Marginalia
 
-Informações adicionais nas seleções.
++ Informações adicionais nas seleções.
 
 #+begin_src emacs-lisp
   (use-package marginalia
@@ -303,7 +279,7 @@ Informações adicionais nas seleções.
 
 ** Orderless
 
-Busca /fuzzy/ no minibuffer.
++ Busca /fuzzy/ no minibuffer.
 
 #+begin_src emacs-lisp
 (use-package orderless
@@ -313,7 +289,7 @@ Busca /fuzzy/ no minibuffer.
 
 ** Consult
 
-Funções úteis:
++ Funções úteis:
 
 - =consult-grep=: Grep recursivo.
 - =consult-find=: Busca recursiva de arquivos.
@@ -378,19 +354,18 @@ Funções úteis:
 ** TODO Doom Dashboard
 
 #+begin_src emacs-lisp
-                                        ;(use-package dashboard
-                                        ;  :init
-                                        ;  (progn
-                                        ;    (setq dashboard-items '((recents . 5)
-                                        ;                            (projects . 5)))
-                                        ;    (setq dashboard-show-shortcuts t)
-                                        ;    (setq dashboard-center-content t)
-                                        ;    (setq dashboard-set-file-icons t)
-                                        ;    (setq dashboard-set-heading-icons t)
-                                        ;    (setq dashboard-startup-banner "~/pic/emacs-typo-03.png"))
-                                        ;  :config
-                                        ;  (dashboard-setup-startup-hook))
-
+;;(use-package dashboard
+;;  :init
+;;  (progn
+;;    (setq dashboard-items '((recents . 5)
+;;                            (projects . 5)))
+;;    (setq dashboard-show-shortcuts t)
+;;    (setq dashboard-center-content t)
+;;    (setq dashboard-set-file-icons t)
+;;    (setq dashboard-set-heading-icons t)
+;;    (setq dashboard-startup-banner "~/pic/emacs-typo-03.png"))
+;;  :config
+;;  (dashboard-setup-startup-hook))
 #+end_src
 
 ** Diminish
@@ -467,7 +442,6 @@ Funções úteis:
 
 ** Rainbow Delimiters
 
-
 #+begin_src emacs-lisp
   (use-package rainbow-delimiters
     :hook ((prog-mode . rainbow-delimiters-mode)
@@ -502,7 +476,7 @@ Funções úteis:
 ** Linguagens
 *** Markdown mode
 
-Para usar o =pandoc= como comando, ele precisa estar instalado no sistema.
++ Para usar o =pandoc= como comando, ele precisa estar instalado no sistema.
 
 #+begin_src emacs-lisp
 (use-package markdown-mode

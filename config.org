@@ -196,7 +196,7 @@ de busca padrão.
 #+begin_src emacs-lisp
 (defun fn/openFileConfig()
   (interactive)
-  (let ((default-directory "/mnt/3C0CEC910CEC478A/Emacs/Linux_Instalation.org"))
+  (let ((default-directory "/mnt/3C0CEC910CEC478A/Emacs/Linux_Installation.org"))
     (call-interactively 'find-file)))
 #+end_src
 
@@ -578,11 +578,11 @@ Evita completar ~<>~ em org-mode para não atrapalhar os snippets de templates.
 *** Syntax highlighting Golang
 
 #+begin_src emacs-lisp
-(require 'ob-go)
-(setq org-src-fintify-natively t)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((go . t))) 
+;;(require 'ob-go)
+;;(setq org-src-fintify-natively t)
+;;(org-babel-do-load-languages
+;; 'org-babel-load-languages
+;; '((go . t))) 
 #+end_src
 
 ** Vterm
@@ -594,10 +594,10 @@ Dependências para compilar:
 - ~libvterm-dev~
   
 #+begin_src emacs-lisp
-(use-package vterm
-:config
-(setq shell-file-name "/bin/zsh"
-      vterm-max-scrollback 5000)) 
+;;(use-package vterm
+;;:config
+;;(setq shell-file-name "/bin/zsh"
+;;      vterm-max-scrollback 5000)) 
 #+end_src
 
 
@@ -620,3 +620,6 @@ Dependências para compilar:
 ;                 (reusable-frames . visible)
 ;                 (window-height . 0.3))))
 #+end_src
+
+
+

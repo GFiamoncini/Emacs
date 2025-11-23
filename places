@@ -1,0 +1,16 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/home/gf/.config/emacs/config.org" . 4459)
+ ("/mnt/3C0CEC910CEC478A/Emacs/Linux_Installation.org" . 5796)
+ ("/mnt/3C0CEC910CEC478A/Configurações/Linux - Configs/IDEs/VSCode/"
+  (dired-filename
+   . "/mnt/3C0CEC910CEC478A/Configurações/Linux - Configs/IDEs/VSCode/Settings.json"))
+ ("/mnt/3C0CEC910CEC478A/Emacs/"
+  (dired-filename
+   . "/mnt/3C0CEC910CEC478A/Emacs/Linux_Installation.org"))
+ ("/mnt/3C0CEC910CEC478A/Configurações/Linux - Configs/Themas/"
+  (dired-filename
+   . "/mnt/3C0CEC910CEC478A/Configurações/Linux - Configs/Themas/Captura de tela de 2025-11-12 21-51-18.png"))
+ ("/home/gf/.config/" (dired-filename . "/home/gf/.config/emacs"))
+ ("/home/gf/.config/emacs/"
+  (dired-filename . "/home/gf/.config/emacs/config.org"))
+ ("/home/gf/.config/emacs/init.el" . 397))

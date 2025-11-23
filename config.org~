@@ -1,0 +1,29 @@
+#+title: Configurações Emacs
+
+#+begin_src emacs-lisp
+(setq inhibit-startup-message t)
+#+end_src
+
+* Configurações Gerais
+
+** Desabilitar tela de boas vindas
+
+#+begin_src emacs-lisp
+  (menu-bar-mode -1)
+#+end_src
+
+** Configuracao da interface
+
+#+begin_src emacs_lisp
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (tooltip-mode -1)
+  (set-fringe-mode 10)
+  (column-number-mode 1)
+  (save-place-mode 1)
+  (recentf-mode 1)
+  (savehist-mode 1)
+#+end_src
+
+
